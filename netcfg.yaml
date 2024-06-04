@@ -1,0 +1,17 @@
+# This file is the "/etc/netplan/" folder on the Ubuntu 22.04 lts distro
+# The admin privilledge was use to write this file and configure it
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      addresses:
+        - 192.168.1.100/24
+      routes:
+        - to: default
+          via: 192.168.1.1
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
